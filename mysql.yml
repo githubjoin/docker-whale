@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mydb:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=Passw0rd
+    ports:
+      - 3306:3306
+    volumes:
+      - /Users/jeongpilseong/my-project/toy/docker-ex/db_master:/var/lib/mysql
+
