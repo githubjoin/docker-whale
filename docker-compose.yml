@@ -1,0 +1,12 @@
+version: '3'
+services:
+  myweb:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - /Users/jeongpilseong/my-project/toy/docker-ex/db_master/nginx.conf:/etc/nginx/nginx.conf
+    links:
+      - mywas:tomcat
+  mywas:
+    image: tomcat:8.0
